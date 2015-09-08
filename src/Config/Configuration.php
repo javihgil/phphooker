@@ -2,6 +2,7 @@
 
 namespace Jhg\PhpHooker\Config;
 
+use Jhg\PhpHooker\Config\Definition\Builder\NodeBuilder;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
@@ -18,7 +19,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('phphooker');
+        $rootNode = $treeBuilder->root('phphooker', 'array', new NodeBuilder());
 
         $rootNode
             ->children()
@@ -35,6 +36,8 @@ class Configuration implements ConfigurationInterface
                     ->treatNullLike([])
                     ->prototype('scalar')->end()
                 ->end()
+
+                ->hookNode('pre-commit')->end()
             ->end() //children
         ;
 
