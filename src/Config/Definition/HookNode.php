@@ -30,7 +30,7 @@ class HookNode extends BaseNode
      */
     protected function validateType($value)
     {
-        // TODO: Implement validateType() method.
+        // throw InvalidTypeException when needed
     }
 
     /**
@@ -42,7 +42,7 @@ class HookNode extends BaseNode
      */
     protected function normalizeValue($value)
     {
-        // TODO: Implement normalizeValue() method.
+        return $value;
     }
 
     /**
@@ -55,7 +55,7 @@ class HookNode extends BaseNode
      */
     protected function mergeValues($leftSide, $rightSide)
     {
-        // TODO: Implement mergeValues() method.
+        return array_merge($leftSide, $rightSide);
     }
 
     /**
@@ -67,7 +67,7 @@ class HookNode extends BaseNode
      */
     protected function finalizeValue($value)
     {
-        // TODO: Implement finalizeValue() method.
+        return $value;
     }
 
     /**
@@ -77,7 +77,7 @@ class HookNode extends BaseNode
      */
     public function hasDefaultValue()
     {
-        // TODO: Implement hasDefaultValue() method.
+        return false;
     }
 
     /**
@@ -89,7 +89,7 @@ class HookNode extends BaseNode
      */
     public function getDefaultValue()
     {
-        // TODO: Implement getDefaultValue() method.
+        return null;
     }
 
 }

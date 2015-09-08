@@ -37,7 +37,8 @@ class Configuration implements ConfigurationInterface
                     ->prototype('scalar')->end()
                 ->end()
 
-                ->hookNode('pre-commit')->end()
+                ->hookNode('pre_commit')->end()
+                ->hookNode('commit_msg')->end()
             ->end() //children
         ;
 

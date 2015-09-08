@@ -83,6 +83,60 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
                     ],
                 ],
             ],
+
+            // pre-commit hook configuration
+            [
+                [
+                    'pre_commit' => [
+                        'boolean' => true,
+                        'string' => 'test',
+                        'integer' => 1923,
+                        'array' => [
+                            'test' => 'ok',
+                        ]
+                    ]
+                ],
+                [
+                    'debug' => false,
+                    'global' => [],
+                    'checkers' => [],
+                    'pre_commit' => [
+                        'boolean' => true,
+                        'string' => 'test',
+                        'integer' => 1923,
+                        'array' => [
+                            'test' => 'ok',
+                        ]
+                    ]
+                ],
+            ],
+
+            // commit-msg hook configuration
+            [
+                [
+                    'commit_msg' => [
+                        'boolean' => true,
+                        'string' => 'test',
+                        'integer' => 1923,
+                        'array' => [
+                            'test' => 'ok',
+                        ]
+                    ]
+                ],
+                [
+                    'debug' => false,
+                    'global' => [],
+                    'checkers' => [],
+                    'commit_msg' => [
+                        'boolean' => true,
+                        'string' => 'test',
+                        'integer' => 1923,
+                        'array' => [
+                            'test' => 'ok',
+                        ]
+                    ]
+                ],
+            ],
         ];
     }
 
